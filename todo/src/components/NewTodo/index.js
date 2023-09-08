@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import './style.css'
 
 function NewTodo({ onNewTodo }) {
     const ESCAPE_KEY = 27;
@@ -41,6 +43,10 @@ function NewTodo({ onNewTodo }) {
             onKeyDown={onKeyDown}/> 
         </div>
     )
-}
+};
 
-export default NewTodo
+NewTodo.propTypes = {
+    onNewTodo: PropTypes.func.isRequired,
+};
+
+export default NewTodo;
